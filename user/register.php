@@ -1,11 +1,11 @@
 <?php
-$conn = new mysqli("localhost","root","root","complaint_nitc17");
+$conn = new mysqli("localhost","root","","complaint_KIET17");
 	
 if($_POST)
 {
 	
 	echo 'hello';
-	/*$fn = mysqli_real_escape_string($conn,$_POST['fn']);
+	$fn = mysqli_real_escape_string($conn,$_POST['fn']);
 	$ln = mysqli_real_escape_string($conn,$_POST['ln']);
 	$email = mysqli_real_escape_string($conn,$_POST['email']);
 	$add1 = mysqli_real_escape_string($conn,$_POST['add1']);
@@ -55,7 +55,7 @@ if($_POST)
 	} //checking name Done 
 	else{ echo "Please Check Name";}	
 }	
-*/
+
 }
 ?>
 

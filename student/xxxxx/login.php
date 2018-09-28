@@ -1,6 +1,6 @@
 <?php
 
-    $conn = new mysqli('localhost','root','root','complaint_nitc17');
+    $conn = new mysqli('localhost','root','root','complaint_KIET17');
     if(isset($_POST['student_login']))
     {
         $roll = trim($_POST['rollno']);

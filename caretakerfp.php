@@ -1,5 +1,5 @@
 <?php 
-	//$conn = mysqli_connect("localhost","root","root","complaint_nitc17") or die("data base not connected");
+	//$conn = mysqli_connect("localhost","root","root","complaint_KIET17") or die("data base not connected");
 	include('connection.php');
 
 		$nm=$_POST['name'];
@@ -11,7 +11,7 @@
 		//echo $un."mayank";
 		if(mysqli_num_rows($r)>0)
 		{
-			$header = "From: <CMSNITC17@gmail.com>";
+			$header = "From: <CMSKIET17@gmail.com>";
 			$pass=$result['password'];
 			if(mail($em,$header,"Your Login password: ".$pass))
 			{

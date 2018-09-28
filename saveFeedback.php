@@ -1,5 +1,5 @@
 <?php
-//$conn = new mysqli("localhost","root","root","complaint_nitc17");
+//$conn = new mysqli("localhost","root","root","complaint_KIET17");
 	include('connection.php');
 if(isset($_POST['Savefeedback']))
 {

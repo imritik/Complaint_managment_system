@@ -35,7 +35,7 @@
           <legend align="center"><span class="number">1</span>Your Search Information</legend>
           
    <?php
-//$conn = mysqli_connect("localhost","root","root","complaint_nitc17") or die("data base not connected");
+//$conn = mysqli_connect("localhost","root","root","complaint_KIET17") or die("data base not connected");
 
    session_start();
 include('connection.php');

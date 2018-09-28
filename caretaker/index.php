@@ -4,7 +4,7 @@ if(!isset($_SESSION['userMail'])){
     header('location:caretaker/login.php');
 }
 include('../connection.php');
- //$conn  = new mysqli('localhost','root','root','complaint_nitc17');
+ //$conn  = new mysqli('localhost','root','root','complaint_KIET17');
 //login according to caretaker
 
         $sql_query="select ctype from caretaker where email ='".$_SESSION['userMail']."'";

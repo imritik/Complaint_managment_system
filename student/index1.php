@@ -6,7 +6,7 @@ if(!isset($_SESSION['userMail'])){
 else
 {
     $userMail=$_SESSION['userMail'];
- //$conn  = new mysqli('localhost','root','root','complaint_nitc17');
+ //$conn  = new mysqli('localhost','root','root','complaint_KIET17');
 include('../connection.php');
         //$sql_query="select Cby from complaint where SEmail ='".$_SESSION['userMail']."'";
       //  $r=mysqli_query($conn,$sql_query);

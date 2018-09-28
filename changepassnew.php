@@ -1,5 +1,5 @@
 	<?php 
-	//$conn = mysqli_connect("localhost","root","root","complaint_nitc17") or die("data base not connected");
+	//$conn = mysqli_connect("localhost","root","root","complaint_KIET17") or die("data base not connected");
 	include('connection.php');
 		if(isset($_POST['submit']))
 		{

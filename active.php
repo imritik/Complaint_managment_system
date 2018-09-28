@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect("localhost","id1382631_cmsnitc17","rootroot","id1382631_cmsnitc17");
+$conn = mysqli_connect("localhost","root","","id1382631_cmsKIET17");
 if(isset($_GET['usercode'])){
 
 	$sql="UPDATE `student` SET `active` = 'y' WHERE `student`.`email` ='".$_GET['usercode']."'";

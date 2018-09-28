@@ -1,8 +1,8 @@
 <?php
 $_SESSION["userId"] = "24";
-//$conn = mysql_connect("localhost","root","root","complaint_nitc14");
+//$conn = mysql_connect("localhost","root","root","complaint_KIET14");
 include('connection.php');
-mysql_select_db("complaint_nitc14",$conn);
+mysql_select_db("complaint_KIET14",$conn);
 if(count($_POST)>0) {
 $result = mysql_query("SELECT *from student WHERE rollno='" . $_SESSION["rollno"] . "'");
 $row=mysql_fetch_array($result);

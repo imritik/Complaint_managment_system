@@ -1,6 +1,6 @@
 <?php
 
-//$conn = mysqli_connect("localhost","root","root","complaint_nitc17") or die("data base not connected");
+//$conn = mysqli_connect("localhost","root","root","complaint_KIET17") or die("data base not connected");
 include('connection.php');
 
 $rollno = $_POST['rollno'];
@@ -16,12 +16,12 @@ if($password==$cpassword)
 		$sql="select * from student where rollno='$rollno'";
 		$res=mysqli_query($conn,$sql);
 		$count=mysqli_num_rows($res);
-	//	echo $count;
+		echo $count;
 
-			//echo $password;
-		//echo $cpassword;
-		//echo$rollno;
-		//echo$name;
+			echo $password;
+		echo $cpassword;
+		echo$rollno;
+		echo$name;
 		if($count>0)
 		{
 			echo '<script type=text/javascript> alert("you are already registered!!!!!......login Now.");
@@ -32,7 +32,7 @@ if($password==$cpassword)
 			if (mysqli_query($conn,$sql1)) 
 			{
 				echo '<script type=text/javascript> alert("Registered successfully!!!!!......login Now.")</script>';
-				$header ="From : CMSNITC17<cmsnitc17@gmail.com>";
+				$header ="From : CMSKIET17<cmsKIET17@gmail.com>";
 				$email=$_POST['email'];
 				$msg = "<a href=\"https://ajayram017.000webhostapp.com/active.php?usercode=".$_POST['email']."\">Activate Now</a>";
 				mail($email,$header,$msg);            

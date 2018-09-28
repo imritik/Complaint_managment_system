@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.6
--- https://www.phpmyadmin.net/
+-- version 4.5.2
+-- http://www.phpmyadmin.net
 --
--- Host: localhost:3306
--- Generation Time: Jun 17, 2017 at 06:49 AM
--- Server version: 10.1.20-MariaDB
--- PHP Version: 7.0.8
+-- Host: localhost
+-- Generation Time: Sep 28, 2018 at 03:48 PM
+-- Server version: 10.1.13-MariaDB
+-- PHP Version: 5.6.20
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `id1382631_cmsKIET17`
+-- Database: `id1382631_cmsnitc17`
 --
 
 -- --------------------------------------------------------
@@ -61,11 +61,8 @@ CREATE TABLE `caretaker` (
 --
 
 INSERT INTO `caretaker` (`tid`, `name`, `ctype`, `contact`, `address`, `email`, `password`) VALUES
-(5, '', 'HOSTEL', '', '', '', ''),
-(1, 'caretaker1', 'hostel', '9567760258', 'nitc', 'ajay11.933@rediffmail.com', '123456789'),
-(2, 'caretaker2', 'acedemics', '9567760258', 'nitc', 'caretaker2@nitc.ac.in', '23456789'),
-(3, 'caretaker3', 'mess', '9874563214', 'nitc', 'caretaker3@nitc.ac.in', '3456789'),
-(4, 'caretaker4', 'other', '9567752525', 'nitc', 'caretaker4@nitc.ac.in', '456789');
+(2, 'bhalu', 'MESS', '7454948749', '22-a ramasharam colony, loco shed moradabad', 'bhalu@kiet.edu', 'bhalu'),
+(1, 'Shivansh Mishra', 'HOSTEL', '7454948749', 'J-166, Patel Nagar -Ist', 'ecell@kiet.edu', 'aliabhatt');
 
 -- --------------------------------------------------------
 
@@ -89,8 +86,9 @@ CREATE TABLE `complaint` (
 --
 
 INSERT INTO `complaint` (`cid`, `description`, `sid`, `type`, `SEmail`, `status`, `Cby`, `date`) VALUES
-(123505, 'no all services provided to students regarding hostel', 'm150050ca', 'Hostel', 'm150050ca_rahul@nitc.ac.in', 'pending', 'rahul raj', '2017-05-09 08:45:16'),
-(123506, 'mess closed 28 april please extends the date...', 'm140361ca', 'Hostel', 'ajay_m140361ca@nitc.ac.in', 'approved', 'ajay', '2017-05-09 17:20:29');
+(123506, 'mess closed 28 april please extends the date...', 'm140361ca', 'Hostel', 'ajay_m140361ca@nitc.ac.in', 'approved', 'ajay', '2017-05-09 11:50:29'),
+(123507, 'food quality', 'M140361CA', 'Mess', 'shivansh.1631145@kiet.edu', 'approved', 'Shivansh Mishra', '2018-09-24 20:45:00'),
+(123508, 'nhi padna aur', '1620cs113', 'Acedemic', 'ritik.1610129@kiet.edu', '', 'mayank', '2018-09-25 13:25:13');
 
 -- --------------------------------------------------------
 
@@ -111,7 +109,8 @@ CREATE TABLE `feedback` (
 --
 
 INSERT INTO `feedback` (`fid`, `sid`, `name`, `email`, `description`) VALUES
-(5093, 'M140361CA', 'ajay', 'ajay_m140361ca@nitc.ac.in', 'system working propery');
+(5093, 'M140361CA', 'ajay', 'ajay_m140361ca@nitc.ac.in', 'system working propery'),
+(7688, '1620cs1126', 'RITIK VERMA', 'ritik.1610129@kiet.edu', 'lovely platform');
 
 -- --------------------------------------------------------
 
@@ -120,14 +119,14 @@ INSERT INTO `feedback` (`fid`, `sid`, `name`, `email`, `description`) VALUES
 --
 
 CREATE TABLE `student` (
-  `rollno` varchar(9) NOT NULL,
+  `rollno` varchar(10) NOT NULL,
   `name` varchar(66) NOT NULL,
   `contact` varchar(10) NOT NULL,
   `email` varchar(250) NOT NULL,
   `hostel` varchar(10) NOT NULL,
   `course` varchar(30) NOT NULL,
   `password` varchar(25) DEFAULT NULL,
-  `active` char(1) NOT NULL DEFAULT 'n'
+  `active` char(1) NOT NULL DEFAULT 'y'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -135,10 +134,8 @@ CREATE TABLE `student` (
 --
 
 INSERT INTO `student` (`rollno`, `name`, `contact`, `email`, `hostel`, `course`, `password`, `active`) VALUES
-('M140361CA', 'AJAY RAM', '9567760230', 'ajay_m140361ca@nitc.ac.in', 'mba block', 'master of computer appliction', '123456789', 'y'),
-('M140429CA', 'SAKSHI ROHILLA', '8136902522', 'sakshi_m140429ca@nitc.ac.in', 'MHL', 'MCA', 'jollykokcha', 'y'),
-('m140574CA', 'ASHOK KUMAR SHARMA', '4988959587', 'ashok_m140574ca@nitc.ac.in', 'mba', 'mca', 'ashok22', 'y'),
-('m150050ca', 'rahul raj', '9061543942', 'rahul_m150050ca@nitc.ac.in', 'fb-4', 'mca', 'rahul', 'y');
+('1620cs1126', 'RITIK VERMA', '7454948749', 'ritik.1610129@kiet.edu', 'muskan', 'btech', 'ritik', 'y'),
+('1620it1171', 'testing', '7454948749', 'testing@kiet.edu', 'tagore', 'mca', 'testing', 'y');
 
 --
 -- Indexes for dumped tables
@@ -187,17 +184,17 @@ ALTER TABLE `student`
 -- AUTO_INCREMENT for table `caretaker`
 --
 ALTER TABLE `caretaker`
-  MODIFY `tid` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `tid` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `complaint`
 --
 ALTER TABLE `complaint`
-  MODIFY `cid` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=123507;
+  MODIFY `cid` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=123509;
 --
 -- AUTO_INCREMENT for table `feedback`
 --
 ALTER TABLE `feedback`
-  MODIFY `fid` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5094;
+  MODIFY `fid` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7689;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

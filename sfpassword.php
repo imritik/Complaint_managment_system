@@ -1,7 +1,7 @@
 <?php
 session_start();
 include 'dbconfig.php';
-//$conn = new mysqli("localhost","root","root","complaint_nitc17");
+//$conn = new mysqli("localhost","root","root","complaint_KIET17");
 include('connection.php');
 echo "connected";
         $username = $_POST['username'];

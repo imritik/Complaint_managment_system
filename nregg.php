@@ -1,5 +1,5 @@
 <?php
-//$conn = mysqli_connect("localhost","root","root","complaint_nitc17") or die("data base not connected");
+//$conn = mysqli_connect("localhost","root","root","complaint_KIET17") or die("data base not connected");
 include('connection.php');
 	$tid = $_POST['tid'];
 	$name = $_POST['name'];
@@ -15,17 +15,20 @@ include('connection.php');
 		//echo$name;
    if($count>0)
     {
+		echo "1";
     	echo '<script type=text/javascript> alert("you are already registered!!!!!")</script>';
-          header("Refresh : 0; URL=admin/index.php?loginDone");
+          header("Refresh : 0; URL=index.html");
     }
     else{
-
+echo "2";
     	  $sql1="insert into caretaker (tid,name,ctype,contact,address,email,password) values('$tid','$name','$ctype','$contact','$address','$email','$password')";
-	   if ($conn->query($sql1) === TRUE) 
+	   if (mysqli_query($conn,$sql1)) 
 	   {
+		   echo "3";
        echo '<script type=text/javascript> alert("Registered successfully!!!!!......login Now.")</script>';
-     header ("Refresh : 0; URL=admin/index.php?loginDone");
+     header ("Refresh : 0; URL=index.html");
 }
+echo "4";
      }
      
 
